@@ -30,6 +30,7 @@ export default function Home() {
   const { data, isFetching } = useQuery({
     queryKey: ["pokemon-list"],
     queryFn: () => axios.get("https://pokeapi.co/api/v2/pokemon"),
+    refetchOnWindowFocus: false,
   });
 
   return (
