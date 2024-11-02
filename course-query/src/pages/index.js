@@ -31,6 +31,9 @@ export default function Home() {
     queryKey: ["pokemon-list"],
     queryFn: () => axios.get("https://pokeapi.co/api/v2/pokemon"),
     refetchOnWindowFocus: false,
+    // refetchOnReconnect: false,
+    // refetchInterval: 10000,
+    // refetchIntervalInBackground: true,
   });
 
   return (
